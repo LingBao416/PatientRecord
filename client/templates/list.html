@@ -1,0 +1,32 @@
+<div class="panel panel-default" ng-init="getPatients()">
+	<div class="panel-heading">
+	  <p class="panel-title"><span style="color:#5bc0de;" 
+class="glyphicon glyphicon-list"> </span> Patients List</p>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped">
+			<thead>
+			<tr>
+			  <th>First Name</th>
+			  <th>Last Name</th>
+			  <th>Sex</th>
+				<th>Age</th>
+				<th>Action</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="patient in patients">
+			  <td>{{ patient.firstname }}</td>
+			  <td>{{ patient.lastname }}</td>
+				<td>{{ patient.sex }}</td>
+				<td>{{ patient.age }}</td>
+			  <td> 
+			    <a href="#/patients/{{patient._id}}/show" class="btn btn-info"> Show  </a>
+			    <a href="#/patients/{{patient._id}}/edit" class="btn btn-success"><span class="glyphicon glyphicon-edit"> </span> Edit  </a>
+			  	<a ng-click="deletePatient(patient._id)" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> </span> Delete </a>
+			  </td>
+			</tr>
+			</tbody>
+		</table>		
+    <div>
+<div>

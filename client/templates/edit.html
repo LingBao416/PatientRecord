@@ -1,0 +1,51 @@
+<div class="panel panel-default" ng-init="showPatient()">
+	<div class="panel-heading">
+	  <p class="panel-title"><span style="color:#5bc0de;" class="glyphicon glyphicon-edit"> </span> Edit Patient</p>
+	</div>
+	<div class="panel-body">
+		<form ng-submit="updatePatient()">
+    <div class="form-group">
+      <label for="firstname">First Name:</label>
+      <input type="text" class="form-control" id="firstname" ng-model="patient.firstname" value="patient.firstname">
+    </div>
+    <div class="form-group">
+      <label for="lastname">Last Name:</label>
+      <input type="text" class="form-control" id="lastname" ng-model="patient.lastname" value="patient.lastname">
+    </div>
+    <div class="form-group">
+      <label for="sex">Location:</label>
+      <input type="text" class="form-control" id="sex" ng-model="patient.sex" value="patient.sex">
+    </div>
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="text" class="form-control" id="age" ng-model="patient.age" value="patient.age">
+    </div>
+    <div class="form-group">
+      <label for="contact">Contact:</label>
+      <input type="text" class="form-control" id="contact" ng-model="patient.contact" value="patient.contact">
+    </div>
+    <div class="form-group">
+      <label for="doctor">Doctor :</label>
+      <input type="text" class="form-control" id="doctor" ng-model="patient.doctor" value="patient.doctor">
+    </div>
+    <div class="form-group">
+      <label for="bloodpressure">Blood Pressure:</label>
+      <input type="text" class="form-control" id="bloodpressure" ng-model="patient.bloodpressure" value="patient.bloodpressure">
+    </div>
+    <div class="form-group">
+      <label for="respiratoryrate">Respiratory Rate :</label>
+      <input type="text" class="form-control" id="respiratoryrate" ng-model="patient.respiratoryrate" value="patient.respiratoryrate">
+    </div>
+    <div class="form-group">
+      <label for="bloodoxygenlevel">Blood Oxygen Level:</label>
+      <input type="text" class="form-control" id="bloodoxygenlevel" ng-model="patient.bloodoxygenlevel" value="patient.bloodoxygenlevel">
+    </div>
+    <div class="form-group">
+      <label for="heartbeatrate">Heart Beat Rate :</label>
+      <input type="text" class="form-control" id="heartbeatrate" ng-model="patient.heartbeatrate" value="patient.heartbeatrate">
+    </div>
+    <button type="submit" style="color:#5bc0de;" class="btn btn-default">Update</button>
+    <a href="#/patients" class="btn btn-default"> Cancel</a>
+</form>		
+    <div>
+<div>

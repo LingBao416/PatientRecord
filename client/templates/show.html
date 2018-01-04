@@ -1,0 +1,22 @@
+<div class="panel panel-default" ng-init="showPatient()">
+	<div class="panel-heading">
+	  <p class="panel-title"> Patient Detail Information</p>
+	</div>
+	<div class="panel-body">
+		<form>
+		<div class="form-group">
+		 <label class="form-control">First Name: {{ patient.firstname }}</label>
+		 <label class="form-control">Last Name: {{ patient.lastname }}</label>
+		 <label class="form-control">Sex: {{ patient.sex }}</label>
+		 <label class="form-control">Age: {{ patient.age }}</label>
+		 <label class="form-control">Contact: {{ patient.contact }}</label>
+		 <label class="form-control">Doctor: {{ patient.doctor }}</label>
+		 <label class="form-control">Blood Pressure: {{ patient.bloodpressure }}</label>
+		 <label class="form-control">Respiratory Rate: {{ patient.respiratoryrate }}</label>
+		 <label class="form-control">Blood Oxygen Level: {{ patient.bloodoxygenlevel }}</label>
+		 <label class="form-control">Heart Beat Rate: {{ patient.heartbeatrate }}</label>
+		<a href="#/patients" class="btn btn-default"> Cancel</a>
+		</div>
+	</form>		
+    <div>
+<div>
