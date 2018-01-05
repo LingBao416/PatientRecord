@@ -3,49 +3,60 @@
 	  <p class="panel-title"><span style="color:#5bc0de;" class="glyphicon glyphicon-plus"> </span> Add New Patient</p>
 	</div>
 	<div class="panel-body">
-		<form ng-submit="addPatient()">
+		<form name="add" ng-submit="addPatient()">
     <div class="form-group">
       <label for="firstname">First Name:</label>
-      <input type="text" class="form-control" id="firstname" ng-model="patient.firstname">
+      <input type="text" class="form-control" id="firstname" name="firstname" ng-model="patient.firstname">
     </div>
     <div class="form-group">
       <label for="lastname">Last Name:</label>
-      <input type="text" class="form-control" id="lastname" ng-model="patient.lastname">
+      <input type="text" class="form-control" id="lastname" name="lastname"ng-model="patient.lastname">
     </div>
     <div class="form-group">
       <label for="sex">Sex:</label>
-      <input type="text" class="form-control" id="sex" ng-model="patient.sex">
+      <input type="text" class="form-control" id="sex" name="sex"ng-model="patient.sex">
     </div>
     <div class="form-group">
       <label for="age">Age:</label>
-      <input type="text" class="form-control" id="age" ng-model="patient.age">
+      <input type="number"  min="1" max="120" class="form-control" id="age" name="age"ng-model="patient.age">
     </div>
     <div class="form-group">
       <label for="contact">Contact:</label>
-      <input type="text" class="form-control" id="contact" ng-model="patient.contact">
+      <input type="number" class="form-control" id="contact"name="contact" ng-model="patient.contact">
     </div>
     <div class="form-group">
       <label for="doctor">Doctor:</label>
-      <input type="text" class="form-control" id="doctor" ng-model="patient.doctor">
+      <input type="text" class="form-control" id="doctor" name="doctor"ng-model="patient.doctor">
     </div>
     <div class="form-group">
       <label for="bloodpressure">Blood Pressure :</label>
-      <input type="text" class="form-control" id="bloodpressure" ng-model="patient.bloodpressure">
+      <input type="text" class="form-control" id="bloodpressure" name="bloodpressure"ng-model="patient.bloodpressure">
     </div>
     <div class="form-group">
       <label for="respiratoryrate">Respiratory Rate :</label>
-      <input type="text" class="form-control" id="respiratoryrate" ng-model="patient.respiratoryrate">
+      <input type="number" class="form-control" id="respiratoryrate" name="respiratoryrate"ng-model="patient.respiratoryrate">
     </div>
     <div class="form-group">
       <label for="bloodoxygenlevel">Blood Oxygen Level :</label>
-      <input type="text" class="form-control" id="bloodoxygenlevel" ng-model="patient.bloodoxygenlevel">
+      <input type="number" class="form-control" id="bloodoxygenlevel" name="bloodoxygenlevel"ng-model="patient.bloodoxygenlevel">
     </div>
     <div class="form-group">
       <label for="heartbeatrate">Heartbeat Rate :</label>
-      <input type="text" class="form-control" id="heartbeatrate" ng-model="patient.heartbeatrate">
+      <input type="number" class="form-control" id="heartbeatrate" name="heartbeatrate"ng-model="patient.heartbeatrate">
     </div>
     <button type="submit" style="color:#5bc0de;" class="btn btn-default">Save</button>
     <a href="#/patients" class="btn btn-default"> Cancel</a>
 </form>		
     <div>
 <div>
+    <script>
+        function validateForm()
+      {
+        var x=document.forms["add"]["firstname"].value;
+        if (x==null || x=="")
+        {
+          alert("姓必须填写");
+          return false;
+        }
+      }
+      </script>

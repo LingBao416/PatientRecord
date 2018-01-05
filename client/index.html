@@ -3,13 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>MEAN CRUD</title>
+	<title>Patients Record</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="style.css" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
+<!-- <div class="container">
 	<div class="row">
 		<div class="header clearfix">
 			<nav>
@@ -20,9 +20,19 @@
 			  </ul>
 			</nav>
 			<h3 class="text-muted">Patients Record Management System</h3>
-		</div>
+		</div> -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+			  <div class="navbar-header">
+				<a class="navbar-brand" href="#">Patients Management System</a>
+			  </div>
+			  <ul class="nav navbar-nav">
+				<li role="presentation"><a href="#/patients">Patients List</a></li>
+			    <li role="presentation"><a href="#/patients/create">Add New Patient</a></li>
+			  </ul>
+			</div>
+		  </nav>
 		<div ng-view></div>
-		
 		<footer class="footer well well-sm">
 		    <p>© 2017 Nexus</p>
 		</footer>
@@ -35,6 +45,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
 <script src="app.js"></script>
 <script src="controllers/controllers.js"></script>
-
+<script>
+	function validateForm()
+{
+  var x=document.forms["add"]["firstname"].value;
+  if (x==null || x=="")
+  {
+    alert("姓必须填写");
+    return false;
+  }
+}
+</script>
 </body>
 </html>
