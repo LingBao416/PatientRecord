@@ -78,64 +78,64 @@ myApp.controller('patController', function ($scope, $route, $routeParams, $http)
 		});
 	};
 	$scope.updatePatient = function () {
-		var a = document.forms["add"]["firstname"].value;
-		var b = document.forms["add"]["lastname"].value;
-		var c = document.forms["add"]["sex"].value;
-		var d = document.forms["add"]["age"].value;
-		var e = document.forms["add"]["contact"].value;
-		var f = document.forms["add"]["doctor"].value;
-		var g = document.forms["add"]["bloodpressure"].value;
-		var h = document.forms["add"]["respiratoryrate"].value;
-		var i = document.forms["add"]["bloodoxygenlevel"].value;
-		var j = document.forms["add"]["heartbeatrate"].value;
+		var a = document.forms["edit"]["firstname"].value;
+		var b = document.forms["edit"]["lastname"].value;
+		var c = document.forms["edit"]["sex"].value;
+		var d = document.forms["edit"]["age"].value;
+		var e = document.forms["edit"]["contact"].value;
+		var f = document.forms["edit"]["doctor"].value;
+		var g = document.forms["edit"]["bloodpressure"].value;
+		var h = document.forms["edit"]["respiratoryrate"].value;
+		var i = document.forms["edit"]["bloodoxygenlevel"].value;
+		var j = document.forms["edit"]["heartbeatrate"].value;
 		if (a == null || a == "") {
 			alert("First Name cannot be null");
-			add.firstname.focus();
+			edit.firstname.focus();
 			return false;
 		}
 		if (b == null || b == "") {
 			alert("Last Name cannot be null");
-			add.lastname.focus();
+			edit.lastname.focus();
 			return false;
 		}
 		if (c == null || c == "") {
 			alert("Sex cannot be null");
-			add.sex.focus();
+			edit.sex.focus();
 			return false;
 		}
 		if (d == null || d == "") {
 			alert("Age cannot be null");
-			add.age.focus();
+			edit.age.focus();
 			return false;
 		}
 		if (e == null || e == "") {
 			alert("Contact cannot be null");
-			add.contact.focus();
+			edit.contact.focus();
 			return false;
 		}
 		if (f == null || f == "") {
 			alert("Doctor cannot be null");
-			add.doctor.focus();
+			edit.doctor.focus();
 			return false;
 		}
 		if (g == null || g == "") {
 			alert("Blood Pressure cannot be null");
-			add.bloodpressure.focus();
+			edit.bloodpressure.focus();
 			return false;
 		}
 		if (h == null || h == "") {
 			alert("Respiratory Rate cannot be null");
-			add.respiratoryrate.focus();
+			edit.respiratoryrate.focus();
 			return false;
 		}
 		if (i == null || i == "") {
 			alert("Blood Oxygen Level cannot be null");
-			add.bloodoxygenlevel.focus();
+			edit.bloodoxygenlevel.focus();
 			return false;
 		}
 		if (j == null || j == "") {
 			alert("Heart Beat Rate cannot be null");
-			add.heartbeatrate.focus();
+			edit.heartbeatrate.focus();
 			return false;
 		}
 		var id = $routeParams.id;
